@@ -1,0 +1,97 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+body{
+    background-color:  rgb(163, 143, 107);
+} 
+
+header{
+
+}
+
+header h1{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(126, 89, 89);
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10vw;
+    flex-wrap: wrap;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: rgb(214, 16, 16);
+}
+
+a:hover{ 
+    color: rgb(255, 255, 255);
+}
+
+section.cards{
+    display: flex;
+    row-gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+article.card{
+    padding: 1rem;
+    width: 30rem;
+    background-color: #e9da85;
+}
+
+.card:first-child{
+    background-color: aqua;
+    position: relative;
+
+}
+
+.card:first-child button{
+    background-color: rgba(100, 100, 100, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; 
+    transition: scale .2s;
+}
+
+.card:first-child button:active{
+    scale: .8;
+    background-color: rgba(100, 100, 100, 0.5);
+}
+/*az abszolut érték a relatív elemheu kapcsolodik! az abszolut szuloje a relatív legyen*/
+.card:nth-child(2){
+    position: relative;    /*az abszolút elem a relativhoz igazodkik*/
+    z-index: -1;
+}
+
+.card:nth-child(2) #circle{
+    border-radius: 50%;
+    width: 20%;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    opacity: .7;
+    z-index: -1;
+}
